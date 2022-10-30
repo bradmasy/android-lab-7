@@ -3,11 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-<!--    <item-->
-<!--        android:id="+@id/veggies"-->
-<!--        android:icon="@drawable/cabbage"-->
-<!--        android:title="Veggies"-->
-<!--        app:showAsAction="ifRoom"/>-->
+    <group
+        android:background="@color/orange">
+        <item
+            android:icon="@drawable/cart"
+            android:title="Veggies"
+            app:showAsAction="always"/>
+        <item
+            android:icon="@drawable/cart"
+            android:title="Seafood"
+            app:showAsAction="always"/>
+
+        <item
+            android:icon="@drawable/cart"
+            android:title="Fruit"
+            app:showAsAction="always"/>
+
+    </group>
+
 
 
 
