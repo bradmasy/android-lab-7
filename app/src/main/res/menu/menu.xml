@@ -3,23 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group
+
         android:background="@color/orange">
         <item
             android:icon="@drawable/cart"
+            android:id="@+id/vegg"
             android:title="Veggies"
             app:showAsAction="always"/>
         <item
             android:icon="@drawable/cart"
             android:title="Seafood"
-            app:showAsAction="always"/>
+            app:showAsAction="always"
+            android:id="@+id/seafood"/>
 
         <item
             android:icon="@drawable/cart"
             android:title="Fruit"
+            android:id="@+id/fruit"
             app:showAsAction="always"/>
 
-    </group>
+
 
 
 

@@ -2,4 +2,35 @@
     <string name="app_name">lab7</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string-array name="vegetables">
+        <item>Cabbage</item>
+        <item>Carrot</item>
+        <item>Cauliflower</item>
+        <item>Lettuce</item>
+        <item>Mushroom</item>
+        <item>Onion</item>
+        <item>Spinach</item>
+        <item>Tomatoes</item>
+    </string-array>
+
+    <string-array name="fruits">
+        <item>Apple</item>
+        <item>Banana</item>
+        <item>Grapes</item>
+        <item>Kiwi</item>
+        <item>Orange</item>
+        <item>Pineapple</item>
+        <item>Strawberry</item>
+        <item>Watermelon</item>
+    </string-array>
+
+    <string-array name="seafood">
+        <item>Clam</item>
+        <item>Crab</item>
+        <item>Fillet</item>
+        <item>Mussel</item>
+        <item>Salmon</item>
+        <item>Shrimp</item>
+        <item>Squid</item>
+    </string-array>
 </resources>
