@@ -19,6 +19,7 @@ public class FruitFragment extends Fragment implements ItemClickListener {
 
     RecyclerView recyclerView;
     String[] fruitArray;
+    String[] prices;
     int[] fruitImages = {R.drawable.apple,R.drawable.banana,R.drawable.grapes,
             R.drawable.kiwifruit,R.drawable.orange,R.drawable.pineapple, R.drawable.strawberry,
             R.drawable.watermelon};
@@ -30,8 +31,9 @@ public class FruitFragment extends Fragment implements ItemClickListener {
         View view = inflater.inflate(R.layout.fruit_fragment,container,false);
         recyclerView = view.findViewById(R.id.recyclerView);
         fruitArray = getResources().getStringArray(R.array.fruits);
+        prices = getResources().getStringArray(R.array.vegetables_prices);
 
-        MyRecyclerViewAdapter myRecyclerViewAdapter = new MyRecyclerViewAdapter(getActivity(), fruitArray, fruitImages);
+        MyRecyclerViewAdapter myRecyclerViewAdapter = new MyRecyclerViewAdapter(getActivity(), fruitArray,  prices, fruitImages);
         myRecyclerViewAdapter.setClickListener(this);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         recyclerView.setAdapter(myRecyclerViewAdapter);

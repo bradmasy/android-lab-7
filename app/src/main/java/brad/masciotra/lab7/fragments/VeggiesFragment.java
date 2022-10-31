@@ -20,6 +20,7 @@ public class VeggiesFragment extends Fragment implements ItemClickListener {
 
     RecyclerView recyclerView;
     String[] veggieArray;
+    String[] prices;
     int[] veggieImages = {R.drawable.cabbage,R.drawable.carrot,R.drawable.cauliflower,
             R.drawable.lettuce,R.drawable.mushroom,R.drawable.onion, R.drawable.spinach,
             R.drawable.tomatoes};
@@ -28,12 +29,12 @@ public class VeggiesFragment extends Fragment implements ItemClickListener {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle bundle) {
-        Log.d("Veggie Frag", ": creating veggie");
         View view = inflater.inflate(R.layout.veggie_fragment,container,false);
         recyclerView = view.findViewById(R.id.recyclerView);
         veggieArray = getResources().getStringArray(R.array.vegetables);
+        prices = getResources().getStringArray(R.array.vegetables_prices);
 
-        MyRecyclerViewAdapter myRecyclerViewAdapter = new MyRecyclerViewAdapter(getActivity(),veggieArray,veggieImages);
+        MyRecyclerViewAdapter myRecyclerViewAdapter = new MyRecyclerViewAdapter(getActivity(),veggieArray,prices,veggieImages);
         myRecyclerViewAdapter.setClickListener(this);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         recyclerView.setAdapter(myRecyclerViewAdapter);
@@ -44,7 +45,6 @@ public class VeggiesFragment extends Fragment implements ItemClickListener {
 
     public static VeggiesFragment newInstance(){
         VeggiesFragment veggiesFragment = new VeggiesFragment();
-        Log.d("Veggie Frag", ": again creating veggie");
         Bundle bundle = new Bundle();
         return veggiesFragment;
     }

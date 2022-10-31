@@ -12,6 +12,17 @@
         <item>Spinach</item>
         <item>Tomatoes</item>
     </string-array>
+    <string-array name="vegetables_prices">
+        <item>$1.13/lb</item>
+        <item>$2.49/lb</item>
+        <item>$3.99 each</item>
+        <item>$5.49 each</item>
+        <item>$3.99/box</item>
+        <item>$3.99/bag</item>
+        <item>$2.99 bunch</item>
+        <item>$3.99/bunch</item>
+    </string-array>
+
 
     <string-array name="fruits">
         <item>Apple</item>
@@ -23,7 +34,16 @@
         <item>Strawberry</item>
         <item>Watermelon</item>
     </string-array>
-
+    <string-array name="fruit_prices">
+        <item>$1.13/lb</item>
+        <item>$2.49/lb</item>
+        <item>$3.99 each</item>
+        <item>$5.49 each</item>
+        <item>$3.99/box</item>
+        <item>$3.99/bag</item>
+        <item>$2.99 bunch</item>
+        <item>$3.99/bunch</item>
+    </string-array>
     <string-array name="seafood">
         <item>Clam</item>
         <item>Crab</item>
@@ -32,5 +52,14 @@
         <item>Salmon</item>
         <item>Shrimp</item>
         <item>Squid</item>
+    </string-array>
+    <string-array name="seafood_prices">
+        <item>$1.13/lb</item>
+        <item>$2.49/lb</item>
+        <item>$3.99 each</item>
+        <item>$5.49 each</item>
+        <item>$3.99/box</item>
+        <item>$3.99/bag</item>
+        <item>$2.99 bunch</item>
     </string-array>
 </resources>

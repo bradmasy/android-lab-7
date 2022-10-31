@@ -21,6 +21,7 @@ public class SeafoodFragment extends Fragment implements ItemClickListener {
     String[] seafoodArray;
     int[] seafoodImages = {R.drawable.clam,R.drawable.crab,R.drawable.fillet,
             R.drawable.mussel,R.drawable.salmon,R.drawable.shrimp, R.drawable.squid};
+    String[] prices;
 
     public SeafoodFragment(){}
 
@@ -29,12 +30,12 @@ public class SeafoodFragment extends Fragment implements ItemClickListener {
         View view = inflater.inflate(R.layout.seafood_fragment,container,false);
         recyclerView = view.findViewById(R.id.recyclerView);
         seafoodArray = getResources().getStringArray(R.array.seafood);
+        prices = getResources().getStringArray(R.array.seafood_prices);
 
-        MyRecyclerViewAdapter myRecyclerViewAdapter = new MyRecyclerViewAdapter(getActivity(), seafoodArray, seafoodImages);
+        MyRecyclerViewAdapter myRecyclerViewAdapter = new MyRecyclerViewAdapter(getActivity(), seafoodArray, prices,seafoodImages);
         myRecyclerViewAdapter.setClickListener(this);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         recyclerView.setAdapter(myRecyclerViewAdapter);
-
         return view;
     }
 

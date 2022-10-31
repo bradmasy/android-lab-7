@@ -15,10 +15,6 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import brad.masciotra.lab7.fragments.FruitFragment;
 import brad.masciotra.lab7.fragments.SeafoodFragment;
 import brad.masciotra.lab7.fragments.VeggiesFragment;
@@ -39,8 +35,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
-       // fm = getSupportFragmentManager();
-
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
                 drawerLayout,
@@ -51,13 +45,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-
-//        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new VeggiesFragment()).commit();
-
-
-
-
     }
 
     @Override

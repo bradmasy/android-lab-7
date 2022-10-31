@@ -14,13 +14,16 @@ import androidx.recyclerview.widget.RecyclerView;
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.MyViewHolder>{
     Context c;
     String[] items;
+    String[] prices;
     int[] images;
     private ItemClickListener clickListener;
 
-    public MyRecyclerViewAdapter(Context c, String[] items, int[] images){
+    public MyRecyclerViewAdapter(Context c, String[] items, String[] prices,  int[] images){
         this.c = c;
         this.items = items;
         this.images = images;
+        this.prices = prices;
+
     }
 
     @NonNull
@@ -34,7 +37,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     @Override
     public void onBindViewHolder(@NonNull MyRecyclerViewAdapter.MyViewHolder holder, int position) {
         holder.text.setText(items[position]);
-       // holder.text2.setText(introductions[position]);
+        holder.prices.setText(prices[position]);
         holder.image.setImageResource(images[position]);
     }
 
@@ -51,11 +54,12 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView text;
+        TextView prices;
         ImageView image;
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
             text = itemView.findViewById(R.id.item_name);
-            Log.d("text", "MyViewHolder: " + text);
+            prices = itemView.findViewById(R.id.item_name2);
             image = itemView.findViewById(R.id.imageView);
             itemView.setOnClickListener(this);
         }
